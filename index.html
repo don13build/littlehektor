@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Little Hektor — Procurement Solutions</title>
+    <meta name="description" content="Industrial equipment and components through global sourcing." />
+    <link rel="icon" href="assets/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandNavy: '#0b0e3a',
+              brandGold: '#F3C400',
+              brandPurple: '#3A2E8C',
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3"
+        role="navigation"
+        aria-label="Main"
+      >
+        <a
+          href="#home"
+          class="flex items-center gap-3 rounded focus:outline-none focus:ring focus:ring-brandPurple/40"
+          aria-label="Little Hektor home"
+        >
+          <img src="assets/logo.svg" alt="Little Hektor logo" class="h-8 w-auto" />
+        </a>
+
+        <button
+          id="menuButton"
+          class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-brandPurple/40 md:hidden"
+          aria-label="Toggle menu"
+          aria-controls="primaryMenu"
+          aria-expanded="false"
+          type="button"
+        >
+          <span class="sr-only">Open main menu</span>
+          ☰
+        </button>
+
+        <ul id="primaryMenu" class="hidden md:flex items-center gap-1 text-[0.95rem]">
+          <li>
+            <a
+              href="#home"
+              aria-current="page"
+              class="rounded-full px-3 py-2 font-medium text-brandPurple bg-brandPurple/10"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="rounded px-3 py-2 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-brandPurple/40">About Us</a>
+          </li>
+          <li>
+            <a href="#products" class="rounded px-3 py-2 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-brandPurple/40">Products &amp; Systems</a>
+          </li>
+          <li>
+            <a href="#certificates" class="rounded px-3 py-2 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-brandPurple/40">Certificates</a>
+          </li>
+          <li>
+            <a href="#contact" class="rounded px-3 py-2 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-brandPurple/40">Contact Us</a>
+          </li>
+        </ul>
+
+        <a
+          href="#brochure"
+          class="hidden md:inline-flex items-center justify-center rounded-md bg-brandPurple px-4 py-2 text-white font-medium shadow hover:bg-brandPurple/90 focus:outline-none focus:ring focus:ring-brandPurple/40"
+        >
+          Download Brochure
+        </a>
+      </nav>
+
+      <ul id="mobileMenu" class="mx-auto hidden max-w-7xl flex-col gap-1 border-t px-4 py-3 md:hidden" aria-label="Mobile">
+        <li><a href="#home" class="block rounded px-3 py-2 bg-brandPurple/10 font-medium text-brandPurple">Home</a></li>
+        <li><a href="#about" class="block rounded px-3 py-2 hover:bg-gray-50">About Us</a></li>
+        <li><a href="#products" class="block rounded px-3 py-2 hover:bg-gray-50">Products &amp; Systems</a></li>
+        <li><a href="#certificates" class="block rounded px-3 py-2 hover:bg-gray-50">Certificates</a></li>
+        <li><a href="#contact" class="block rounded px-3 py-2 hover:bg-gray-50">Contact Us</a></li>
+        <li><a href="#brochure" class="block rounded px-3 py-2 bg-brandPurple text-white">Download Brochure</a></li>
+      </ul>
+    </header>
+
+    <!-- Hero -->
+    <main id="home" class="mx-auto max-w-[1400px]">
+      <section class="grid lg:grid-cols-2">
+        <!-- Left panel -->
+        <div class="bg-brandNavy px-6 py-14 sm:py-16 md:py-20 text-white">
+          <div class="mx-auto max-w-xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
+              <span class="text-brandGold">LITTLE HEKTOR</span><br />
+              Procurement<br />Solutions
+            </h1>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                class="rounded-md bg-brandGold px-5 py-3 font-semibold text-brandNavy hover:opacity-90 focus:outline-none focus:ring focus:ring-brandPurple/40"
+                >Contact Us</a
+              >
+              <a
+                href="#quote"
+                class="rounded-md border border-brandGold px-5 py-3 font-semibold text-brandGold hover:bg-white/10 focus:outline-none focus:ring focus:ring-brandPurple/40"
+                >Get a Quote</a
+              >
+            </div>
+
+            <hr class="my-10 border-white/20" />
+
+            <ul class="space-y-4 text-brandGold/90">
+              <li class="flex items-start gap-3">
+                <svg class="mt-1 h-5 w-5 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7 7a1 1 0 0 1-1.414 0l-3-3A1 1 0 1 1 6.71 9.29l2.293 2.293 6.293-6.293a1 1 0 0 1 1.408 0z" clip-rule="evenodd" /></svg>
+                <span class="text-base text-white">On time delivery guaranteed</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="mt-1 h-5 w-5 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7 7a1 1 0 0 1-1.414 0l-3-3A1 1 0 1 1 6.71 9.29l2.293 2.293 6.293-6.293a1 1 0 0 1 1.408 0z" clip-rule="evenodd" /></svg>
+                <span class="text-base text-white">100% Quality Assured</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="mt-1 h-5 w-5 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7 7a1 1 0 0 1-1.414 0l-3-3A1 1 0 1 1 6.71 9.29l2.293 2.293 6.293-6.293a1 1 0 0 1 1.408 0z" clip-rule="evenodd" /></svg>
+                <span class="text-base text-white">Wide range of products</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="flex flex-col">
+          <div class="relative aspect-[16/10] w-full bg-gray-200">
+            <img src="public/offshore.jpg" alt="Offshore industrial vessels" class="absolute inset-0 h-full w-full object-cover" />
+          </div>
+
+          <div class="bg-brandPurple text-white px-6 py-12 md:py-16">
+            <div class="mx-auto grid max-w-3xl gap-6 md:max-w-5xl md:grid-cols-2 md:items-start">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
+                WE ARE READY TO SERVE YOU
+              </h2>
+              <div class="space-y-4">
+                <p class="text-lg leading-relaxed">
+                  Industrial equipment and components through global sourcing
+                </p>
+                <p class="text-sm text-white/80">
+                  We supply products &amp; systems for companies from all over the world.
+                </p>
+                <a
+                  href="#about"
+                  class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 focus:outline-none focus:ring focus:ring-white/30"
+                >
+                  <span>Know More</span>
+                  <span class="inline-grid h-6 w-6 place-items-center rounded-full bg-brandGold text-brandNavy">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- About Us -->
+      <section id="about" aria-labelledby="about-heading" class="bg-white px-6 py-16 md:py-24">
+        <div class="mx-auto max-w-5xl">
+          <h2 id="about-heading" class="text-3xl md:text-4xl font-semibold tracking-tight text-brandNavy">About Us</h2>
+          <div class="mt-6 space-y-5 text-lg leading-relaxed text-gray-700">
+            <p>
+              Little Hektor LLC provides uninterrupted MRO parts and industrial supplies to keep your mission-critical assets operational 365 days a year.
+            </p>
+            <p>
+              Our thoughtful approach integrates flexible sourcing strategies, transparent supplier selections, adaptable risk management, 24/7 support, and reliable last-mile delivery and tracking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products & Systems -->
+      <section id="products" aria-labelledby="products-heading" class="bg-white px-6 pb-20 scroll-mt-20">
+        <div class="mx-auto max-w-6xl">
+          <h2 id="products-heading" class="text-3xl md:text-4xl font-semibold tracking-tight text-brandNavy">Products &amp; Systems</h2>
+          <p class="mt-2 text-gray-600">A snapshot of key packages we supply and the typical portfolio items available.</p>
+
+          <!-- Toolbar -->
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <label for="products-filter-input" class="sr-only">Search packages or portfolio items</label>
+            <div class="relative w-full sm:max-w-md">
+              <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input id="products-filter-input" type="text" inputmode="search" placeholder="Search packages or items..." class="w-full rounded-lg border border-gray-300 bg-white pl-10 pr-10 py-2 text-[15px] shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring focus:ring-brandPurple/30" />
+              <button id="products-filter-clear" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 hidden rounded px-2 py-1 text-xs text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-brandPurple/20">Clear</button>
+            </div>
+            
+          </div>
+
+          <div id="productsTableWrapper" class="mt-6 overflow-x-auto rounded-2xl border border-gray-200 shadow-lg relative">
+            <div id="productsTableTopShadow" class="pointer-events-none absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-black/10 to-transparent opacity-0 transition-opacity"></div>
+            <table class="min-w-full text-left">
+              <caption class="sr-only">Products &amp; Systems inventory</caption>
+              <thead class="bg-gradient-to-r from-brandNavy to-brandPurple sticky top-0 z-10">
+                <tr>
+                  <th scope="col" class="w-64 px-6 py-4 text-xs md:text-sm font-semibold uppercase tracking-wider text-white/90">Packages</th>
+                  <th scope="col" class="px-6 py-4 text-xs md:text-sm font-semibold uppercase tracking-wider text-white/90">Portfolio Items</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-pump-packages" class="hover:underline">Pump Packages</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Screw Pumps, Centrifugal Pumps, Propeller Pumps, Progressing Cavity Pumps, Peristaltic Pumps and Macerators</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-skids" class="hover:underline">SKIDS-Top Side &amp; Cryogenic</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Skids and Detail engineering related to Automation, Instrumentation, Control, Skid and piping platform Plug &amp; Play (Atex, Cryo and Dust environments)</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-hvac" class="hover:underline">HVAC Packages</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">HVAC, Fans, silencers, louvers, Dampers, Ventilation Systems</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-treatment" class="hover:underline">Treatment Packages</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Oily water separator, Sewage treatment, reverse osmosis Fresh water generators</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-foundation" class="hover:underline">Foundation Packages</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Epoxy Chockfast Foundation Systems (Red/Orange)</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-valves" class="hover:underline">Valves</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Industrial &amp; Marine Valves</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-lubricants" class="hover:underline">Lubricants &amp; Chemicals</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Marine Lubricants and Marine Chemicals</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-helideck" class="hover:underline">Helideck Packages</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Helideck, Gangway, Aluminium Sections, Helideck belts, Lights and Navigation Equipments, JET Refuel systems</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-marine-engines" class="hover:underline">Marine Engines</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Main Engines/Aux Engines/Spares</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-spares" class="hover:underline">Spares for Marine Engines</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Main Engines/Spares</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-inert-gas" class="hover:underline">Inert Gas Systems</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Nitrogen Gas Systems</td>
+                </tr>
+                <tr class="products-row odd:bg-white even:bg-gray-50 hover:bg-brandPurple/5 transition-colors">
+                  <td class="px-6 py-4 font-semibold text-brandNavy"><a href="#pkg-air-compressors" class="hover:underline">Air Compressors</a></td>
+                  <td class="px-6 py-4 text-gray-700 border-l border-gray-200">Starting air &amp; working air compressors and Industrial compressors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
+        </div>
+      </section>
+      <!-- Certificates at the bottom -->
+      <section id="certificates" aria-labelledby="certificates-heading" class="bg-white px-6 py-16 md:py-24 scroll-mt-20">
+        <div class="mx-auto max-w-6xl">
+          <h2 id="certificates-heading" class="text-3xl md:text-4xl font-semibold tracking-tight text-brandNavy">Certificates</h2>
+          <div class="mt-8">
+            <img src="public/certificates.jpg" alt="Certification logos: ABS, Bureau Veritas, DNV-GL, Lloyd's Register, RINA" class="mx-auto h-auto w-full object-contain" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="contact-heading" class="bg-white px-6 py-16 md:py-24 scroll-mt-20">
+        <div class="mx-auto max-w-6xl">
+          <h2 id="contact-heading" class="text-3xl md:text-5xl font-semibold tracking-tight text-brandNavy">Get in Touch With Us</h2>
+
+          <div class="mt-8 grid gap-10 md:grid-cols-2">
+            <div class="space-y-4">
+              <p class="text-xs font-semibold uppercase tracking-wider text-gray-700">Do you need help or support?</p>
+              <p>
+                <a href="tel:+971585601448" class="text-brandNavy underline-offset-2 hover:underline focus:outline-none focus:ring focus:ring-brandPurple/30">+971 58 560 1448</a>
+              </p>
+              <p class="text-xs font-semibold uppercase tracking-wider text-gray-700">Or write to us:</p>
+              <ul class="space-y-1">
+                <li>
+                  <a href="mailto:sales@lhtech-me.com" class="text-gray-700 underline-offset-2 hover:underline focus:outline-none focus:ring focus:ring-brandPurple/30">sales@lhtech-me.com</a>
+                </li>
+                <li>
+                  <a href="mailto:sales@littlehektor.com" class="text-gray-700 underline-offset-2 hover:underline focus:outline-none focus:ring focus:ring-brandPurple/30">sales@littlehektor.com</a>
+                </li>
+              </ul>
+
+              <p class="mt-6 text-xs font-semibold uppercase tracking-wider text-gray-700">We are happy to see you here.</p>
+              <p class="text-lg font-medium text-brandNavy">If you have any questions, feel free to contact with us</p>
+            </div>
+
+            <!-- No form per request; keeping the right column empty for symmetry on desktop -->
+            <div class="hidden md:block"></div>
+          </div>
+
+          <!-- Contact details grid -->
+          <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h3 class="text-sm font-semibold tracking-wider text-gray-700 uppercase">Our Address</h3>
+              <ul class="mt-3 space-y-2 text-gray-700">
+                <li>Aghaadir Building – Kuwait St</li>
+                <li>P O Box 118034 Dubai</li>
+                <li>United Arab Emirates</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold tracking-wider text-gray-700 uppercase">Opening Hours</h3>
+              <ul class="mt-3 space-y-2 text-gray-700">
+                <li>Monday – Friday: 9AM — 7PM</li>
+                <li>Saturday: 9AM — 3PM</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold tracking-wider text-gray-700 uppercase">Contact Us</h3>
+              <ul class="mt-3 space-y-2 text-gray-700">
+                <li><a href="tel:+971585601448" class="underline-offset-2 hover:underline">+971 58 560 1448</a></li>
+                <li><a href="mailto:sales@lhtech-me.com" class="underline-offset-2 hover:underline">sales@lhtech-me.com</a></li>
+                <li><a href="mailto:sales@littlehektor.com" class="underline-offset-2 hover:underline">sales@littlehektor.com</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold tracking-wider text-gray-700 uppercase">Social Media</h3>
+              <ul class="mt-3 space-y-2 text-gray-700">
+                <li><a href="#" class="underline-offset-2 hover:underline">Facebook</a></li>
+                <li><a href="#" class="underline-offset-2 hover:underline">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Simple placeholders for anchors -->
+    <section id="contact" class="sr-only" aria-hidden="true">Contact</section>
+    <section id="quote" class="sr-only" aria-hidden="true">Quote</section>
+    <section id="brochure" class="sr-only" aria-hidden="true">Brochure</section>
+
+    <script src="main.js" defer></script>
+  </body>
+  </html>
+
+

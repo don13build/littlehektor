@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="40" viewBox="0 0 220 40" role="img" aria-label="Little Hektor logo">
+  <defs>
+    <style>
+      .t{font:700 18px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+    </style>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M24 8l-7 5 10-2-10 7 12-3-9 7 15-6" stroke="#0b0e3a" stroke-width="2"/>
+    <text class="t" x="50" y="25" fill="#0b0e3a">LITTLE <tspan fill="#3A2E8C">HEKTOR</tspan></text>
+  </g>
+  <!-- Placeholder logo; replace with your brand asset -->
+  <title>Little Hektor</title>
+</svg>
+
+
