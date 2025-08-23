@@ -188,18 +188,9 @@
       <section id="products" aria-labelledby="products-heading" class="bg-white px-6 pb-20 scroll-mt-20">
         <div class="mx-auto max-w-6xl">
           <h2 id="products-heading" class="text-3xl md:text-4xl font-semibold tracking-tight text-brandNavy">Products &amp; Systems</h2>
-          <p class="mt-2 text-gray-600">A snapshot of key packages we supply and the typical portfolio items available.</p>
+          <p class="mt-2 text-gray-600">A Summary of Our Key Supply Packages and Available Products.</p>
 
-          <!-- Toolbar -->
-          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <label for="products-filter-input" class="sr-only">Search packages or portfolio items</label>
-            <div class="relative w-full sm:max-w-md">
-              <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-              <input id="products-filter-input" type="text" inputmode="search" placeholder="Search packages or items..." class="w-full rounded-lg border border-gray-300 bg-white pl-10 pr-10 py-2 text-[15px] shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring focus:ring-brandPurple/30" />
-              <button id="products-filter-clear" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 hidden rounded px-2 py-1 text-xs text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-brandPurple/20">Clear</button>
-            </div>
-            
-          </div>
+
 
           <div id="productsTableWrapper" class="mt-6 overflow-x-auto rounded-2xl border border-gray-200 shadow-lg relative">
             <div id="productsTableTopShadow" class="pointer-events-none absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-black/10 to-transparent opacity-0 transition-opacity"></div>
@@ -268,7 +259,7 @@
         </div>
       </section>
       <!-- Certificates at the bottom -->
-      <section id="certificates" aria-labelledby="certificates-heading" class="bg-white px-6 py-16 md:py-24 scroll-mt-20">
+      <section id="certificates" aria-labelledby="certificates-heading" class="bg-white px-6 py-12 md:py-16 scroll-mt-20">
         <div class="mx-auto max-w-6xl">
           <h2 id="certificates-heading" class="text-3xl md:text-4xl font-semibold tracking-tight text-brandNavy">Certificates</h2>
           <div class="mt-8">
@@ -278,14 +269,31 @@
       </section>
 
       <!-- Brands Section -->
-      <section id="brands" aria-labelledby="brands-heading" class="bg-white px-6 py-16 md:py-24 scroll-mt-20">
+      <section id="brands" aria-labelledby="brands-heading" class="bg-white px-6 py-12 md:py-16 scroll-mt-20">
         <div class="mx-auto max-w-6xl">
           <h2 id="brands-heading" class="text-3xl md:text-4xl font-semibold tracking-tight text-brandNavy mb-8">Industrial Brands</h2>
           
-          <div class="text-center mb-12">
-            <p class="text-xl md:text-2xl font-semibold text-brandNavy">
-              We will supply more than 10,000 industrial brands to any region of the world
+          <div class="mb-8">
+            <p class="text-base text-gray-600">
+              We supply a comprehensive range of industrial brands worldwide.
             </p>
+          </div>
+
+          <!-- Compact Search Bar -->
+          <div class="max-w-sm mb-8">
+            <div class="relative">
+              <input 
+                type="text" 
+                id="brand-search" 
+                placeholder="Search brands" 
+                class="w-full px-3 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandPurple focus:border-brandPurple outline-none transition-all duration-200 text-gray-900 placeholder-gray-500 text-sm"
+              />
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+            </div>
           </div>
 
           <!-- Alphabetical Filter Bar -->
@@ -483,7 +491,7 @@
 
           <!-- Brands Display Area -->
           <div id="brands-display" class="min-h-[300px]">
-            <div id="brands-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div id="brands-content" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
               <!-- Brands will be populated by JavaScript -->
             </div>
           </div>
@@ -561,7 +569,7 @@
     <section id="quote" class="sr-only" aria-hidden="true">Quote</section>
     <section id="brochure" class="sr-only" aria-hidden="true">Brochure</section>
 
-    <script src="main.js?v=1" defer></script>
+    <script src="main.js?v=40" defer></script>
   </body>
   </html>
 
