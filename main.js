@@ -181,14 +181,15 @@ const handleBrandFilter = (letter) => {
           <div class="pt-4">
             <button 
               id="expand-btn-${letter}" 
-              class="group flex items-center justify-center text-brandPurple hover:text-brandPurple/80 transition-all duration-500 w-20 h-16 rounded-full hover:bg-purple-50 hover:shadow-lg mx-auto animate-pulse"
+              class="group flex items-center justify-center text-brandPurple hover:text-brandPurple/80 transition-all duration-500 w-20 h-20 rounded-full hover:bg-purple-50 hover:shadow-lg mx-auto animate-pulse"
               data-letter="${letter}"
               data-expanded="false"
               style="opacity: 0.7; transform: translateY(10px);"
               aria-label="Toggle brands view"
             >
-              <svg class="w-8 h-8 transform transition-all duration-500 group-hover:scale-125 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 5v14M19 12l-7 7-7-7"/>
+              <svg class="w-8 h-8 transition-all duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 13l5 5 5-5"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l5 5 5-5"/>
               </svg>
             </button>
           </div>
@@ -223,17 +224,21 @@ const handleExpand = (event) => {
   const hiddenBrandElements = document.querySelectorAll(`[data-hidden-brand="true"]`);
   const arrowIcon = button.querySelector('svg');
   
+  console.log('handleExpand called, isExpanded:', isExpanded);
+  
   if (hiddenBrandElements.length === 0) return;
   
   if (isExpanded) {
-    // Collapse: hide brands and rotate arrow back
+    // Collapse: hide brands and rotate arrow down
+    console.log('Collapsing brands');
     hiddenBrandElements.forEach(element => {
       element.classList.add('hidden');
     });
     arrowIcon.style.transform = 'rotate(0deg)';
     button.setAttribute('data-expanded', 'false');
   } else {
-    // Expand: show brands and rotate arrow down
+    // Expand: show brands and rotate arrow up
+    console.log('Expanding brands');
     hiddenBrandElements.forEach(element => {
       element.classList.remove('hidden');
     });
@@ -252,17 +257,17 @@ const handleSearchExpand = (event) => {
   if (!hiddenSearchSection) return;
   
   if (isExpanded) {
-    // Collapse: hide results and rotate arrow back, move button back to middle
+    // Collapse: hide results and rotate arrow to point down (expand)
     hiddenSearchSection.classList.add('hidden');
-    arrowIcon.style.transform = 'rotate(0deg)';
+    arrowIcon.style.transform = 'rotate(180deg)';
     button.setAttribute('data-expanded', 'false');
     button.querySelector('span').textContent = `View All`;
     
 
   } else {
-    // Expand: show results and rotate arrow down
+    // Expand: show results and rotate arrow to point up (collapse)
     hiddenSearchSection.classList.remove('hidden');
-    arrowIcon.style.transform = 'rotate(180deg)';
+    arrowIcon.style.transform = 'rotate(0deg)';
     button.setAttribute('data-expanded', 'true');
     button.querySelector('span').textContent = `Hide Results`;
   }
